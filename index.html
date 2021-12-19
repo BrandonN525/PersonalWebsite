@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>One Page Resume</title>
+
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+     </style>
+
+</head>
+
+<body>
+
+    <div id="page-wrap">
+    
+        <div id="contact-info" class="vcard">
+        
+            <!-- Microformats! -->
+        
+            <h1 class="fn">Brandon Nicolas</h1>
+        
+            <p>
+                Cell: <span class="tel">732-796-8657</span><br/>
+                Email: <a class="email" href="mailto:brandon.nicolas525@gmail.com">brandon.nicolas525@gmail.com</a><br/>
+                GitHub: <a class="github" href="https://github.com/BrandonN525">https://github.com/BrandonN525</a><br/>
+                LinkedIn: <a class="linkedin" href="https://www.linkedin.com/in/brandon-nicolas-b07397152/">https://www.linkedin.com/in/brandon-nicolas-b07397152/</a>
+            </p>
+        </div>
+                
+        <div id="objective">
+            <p>
+                Results-oriented data professional with experience in database development, ETL pipeline development, data 
+migration, continuous integration and continuous deployment, technical documentation, and data visualization 
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+          
+          <dt>Professional Experience</dt>
+            <dd>
+                <h2>Infosys <span>Senior Associate Analyst - Basking Ridge, NJ - April 2021 – Present</span></h2></br>
+                <h2> <span>Associate Analyst - Basking Ridge, NJ - December 2019 – April 2021</span></h2>
+                <ul>
+                    <li>Developed ETL pipelines in Informatica Intelligent Cloud Services (IICS), leading to a 30% reduction in 
+                        overall ETL pipeline runtime compared to previously developed pipelines in IBM DataStage
+                        </li>
+                    <li>Designed detailed ETL mappings in IICS using joiners, expressions, lookups, and other data 
+                        transformations to move data from a source table to a target table</li>
+                    <li>Created and executed Mass Ingestion data tasks in IICS to move large quantities of data from an Oracle
+                        database to a Snowflake database, this allowed for a migration of data from multiple tables at one time</li>
+                    <li>Successfully co-led an effort to modernize the issue tracking and version control of code repositories in 
+                        our team, moving from Serena Dimensions to Jira and GitHub</li>
+                    <li>Wrote complex SQL queries in IICS and Snowflake for development and testing purposes</li>
+                    <li>Performed unit testing, compared data outputs between Oracle and Snowflake to ensure the stability and 
+                        accuracy of the newly created pipelines</li>
+                    <li>Successfully created GitHub Actions workflow YAML file used for the purpose of continuous integration 
+                        and continuous deployment</li>
+                    <ul>
+                        <li>GitHub Actions workflow is run automatically when any push or pull request is made on specific 
+                            path in the repository</li>
+                        <li>Code is checked out on GitHub's hosted virtual environment; the flow builds the checked-out 
+                            code and runs tests on the code using GitHub's setup-node@v2 Action and an installed npm 
+                            package</li>
+                    </ul>
+                    <li>Designed Tableau dashboards detailing the technology support lifecycle of different applications on the 
+                        platform</li>
+                    <li>Authored technical documentation for ETL migration project</li>
+                </ul>
+                
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Education</dt>
+            <dd>
+              <h2>Rutgers University, New Brunswick, NJ 08854</h2>
+                <p>Bachelor of Arts in <strong>Information Technology and Informatics</strong><br/>
+                   Minor in <strong>Business Administration</strong></p>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Technical Skills</dt>
+            <dd>
+                <h2>Certifications</h2>
+                <p>AWS Certified Cloud Practitioner (Credential ID: PLKQLBN2PNEQQSGT)</p>
+                
+                <h2>Languages</h2>
+                <p>SQL, Python</p>
+
+                <h2>Operating Systems</h2>
+                <p>Windows 10, Linux/Ubuntu</p>
+
+                <h2>Software</h2>
+                <p>Informatica Intelligence Cloud Services (IICS), Amazon Web Services (AWS), Snowflake Data 
+                    Warehouse, Oracle Data Warehouse, Git Bash, GitHub Actions, Tableau, MySQL, Jira, Confluence, PowerShell 
+                    Command Line, Linux Command Line, SPSS</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+          
+        </dl>
+        
+        <div class="clear"></div>
+    
+    </div>
+
+</body>
+
+</html>
