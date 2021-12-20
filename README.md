@@ -1,2 +1,2 @@
 # PersonalWebsite
-Resume hosted on AWS and viewable at brandonnicolas.com
+Resume hosted on AWS S3 static website and viewable at brandonnicolas.com
