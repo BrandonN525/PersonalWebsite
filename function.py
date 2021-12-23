@@ -10,7 +10,7 @@ def handler(event, context):
     #update 'visits' variable in dynamodb table
     #VisitCount = table.get_item(Key = {'Site'}, ProjectionExpression = 'Visits')
     
-    table.updateitem(
+    table.update_item(
         Key = {'Site'},
         UpdateExpression = "SET Visits = Visits + 1",
         #UpdateExpression = "ADD Visits: 1"
