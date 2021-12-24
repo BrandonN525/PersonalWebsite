@@ -9,8 +9,7 @@ dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('resumecounter')
 
 def handler(event, context):
-    #when get request is received (which is done everytime this function runs, it runs on get events) by website
-    #update 'visits' variable in dynamodb table
+    #when get request is received update 'visits' variable in dynamodb table
     
     table.update_item(
         Key = {'Site': 0},
