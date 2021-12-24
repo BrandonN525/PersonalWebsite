@@ -4,23 +4,19 @@ import boto3
 import json
 import decimal
 
-table = boto3.resource('dynamodb').Table('resumecounter')
+dynamodb = boto3.resource('dynamodb')
+
+table = dynamodb.Table('resumecounter')
 
 def handler(event, context):
     #when get request is received (which is done everytime this function runs, it runs on get events) by website
     #update 'visits' variable in dynamodb table
-    #VisitCount = table.get_item(Key = {'Site'}, ProjectionExpression = 'Visits')
     
     table.update_item(
-        Key = {'Site': '0'},
-        UpdateExpression = "SET Visits = Visits + :val",
+        Key = {'Site': 0},
+        UpdateExpression = 'SET Visits = Visits + :val',
         ExpressionAttributeValues={
-            ':val': decimal.Decimal(1)
+            ":val": 1
         },
-        #UpdateExpression = "ADD Visits: 1",
-        #UpdateExpression = "Set Visits = :r"
-        #ExpressionAttributeValues={
-        #    ':r': VisitCount.value + 1
-        #},
-        ReturnValues = "ALL_NEW"
+        ReturnValues = "NONE"
     )
