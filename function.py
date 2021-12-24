@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import boto3
 import json
+import decimal
 
 table = boto3.resource('dynamodb').Table('resumecounter')
 
@@ -11,12 +12,15 @@ def handler(event, context):
     #VisitCount = table.get_item(Key = {'Site'}, ProjectionExpression = 'Visits')
     
     table.update_item(
-        Key = {'Site'},
-        UpdateExpression = "SET Visits = Visits + 1",
-        #UpdateExpression = "ADD Visits: 1"
+        Key = {'Site': '0'},
+        UpdateExpression = "SET Visits = Visits + :val",
+        ExpressionAttributeValues={
+            ':val': decimal.Decimal(1)
+        },
+        #UpdateExpression = "ADD Visits: 1",
         #UpdateExpression = "Set Visits = :r"
         #ExpressionAttributeValues={
         #    ':r': VisitCount.value + 1
         #},
-        ReturnValues = "UPDATED_NEW"
+        ReturnValues = "ALL_NEW"
     )
