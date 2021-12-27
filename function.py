@@ -20,4 +20,5 @@ def handler(event, context):
         ReturnValues = "UPDATED_NEW"
     )
 
-    return response
+    print("UPDATING ITEM")
+    print(response)
