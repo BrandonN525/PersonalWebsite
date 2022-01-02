@@ -3,7 +3,7 @@ async function getCounter() {
       method: 'GET'
     });
     let data = await response.json();
-    document.getElementById("visits").innerHTML = "Visits: " + data['Visits'];
+    document.getElementById("visits").innerHTML = "Visits: " + data['counter'];
     console.log(data);
     return data;
 }
