@@ -9,3 +9,20 @@ async function getCounter() {
 }
 
 getCounter();
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+async function updateCounter() {
+  const data = await getCounter();
+  let count = 0;
+  const target = data.counter;
+  const interval = setInterval(() => {
+    document.getElementById("visits").innerText = `Visits: ${count}`;
+    if (count++ >= target) clearInterval(interval);
+  }, 50);
+}
+updateCounter();
