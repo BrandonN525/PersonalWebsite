@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
   updateCounter();
@@ -12,6 +11,8 @@ function setupNavigation() {
       const targetSection = document.querySelector(this.getAttribute('href'));
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = this.getAttribute('href'); // Redirect to new pages
       }
     });
   });
@@ -34,10 +35,16 @@ async function updateCounter() {
 }
 
 // Animate the counter from 0 to the target number
-function animateCounter(target) {
-  let count = 0;
-  const interval = setInterval(() => {
-    document.getElementById('visits').innerText = `Visits: ${count}`;
-    if (count++ >= target) clearInterval(interval);
-  }, 50);
+function animateCounter(target, duration = 2000) {
+  const startTime = performance.now();
+  function updateCounter(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const currentCount = Math.floor(progress * target);
+    document.getElementById('visits').innerText = `Visits: ${currentCount}`;
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    }
+  }
+  requestAnimationFrame(updateCounter);
 }
