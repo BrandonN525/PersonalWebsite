@@ -187,7 +187,7 @@ dd.clear {
 /* Page Container */
 .container {
   width: 80%;
-  margin: auto;
+  margin: 40px auto;
   padding: 50px 0;
 }
 
@@ -198,4 +198,54 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust Navigation */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav div:first-child {
+    margin-bottom: 10px;
+  }
+  
+  nav a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  /* Hero Section Adjustments */
+  .hero {
+    height: 60vh; /* slightly shorter hero on mobile */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 35px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .hero .cta {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  /* Resume Container */
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  /* Adjust headings if needed */
+  h2 {
+    font-size: 18px;
+  }
 }
