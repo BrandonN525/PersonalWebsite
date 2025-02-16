@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   setupNavigation();
   updateCounter();
 });
 
 // Smooth scrolling for navigation links
 function setupNavigation() {
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll("nav a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetSection = document.querySelector(this.getAttribute('href'));
+      const targetSection = document.querySelector(this.getAttribute("href"));
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: "smooth" });
       } else {
-        window.location.href = this.getAttribute('href'); // Redirect to new pages
+        window.location.href = this.getAttribute("href"); // Redirect to new pages
       }
     });
   });
@@ -21,16 +21,19 @@ function setupNavigation() {
 // Fetch the visit counter with error handling
 async function updateCounter() {
   try {
-    const response = await fetch('https://2g03j5b0b1.execute-api.us-east-1.amazonaws.com/Prod/counter', {
-      method: 'GET',
-    });
+    const response = await fetch(
+      "https://2g03j5b0b1.execute-api.us-east-1.amazonaws.com/Prod/counter",
+      {
+        method: "GET"
+      }
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
     animateCounter(data.counter);
   } catch (error) {
-    console.error('Failed to fetch the visit counter:', error);
+    console.error("Failed to fetch the visit counter:", error);
   }
 }
 
@@ -41,7 +44,7 @@ function animateCounter(target, duration = 2000) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
     const currentCount = Math.floor(progress * target);
-    document.getElementById('visits').innerText = `Visits: ${currentCount}`;
+    document.getElementById("visits").innerText = `Visits: ${currentCount}`;
     if (progress < 1) {
       requestAnimationFrame(updateCounter);
     }
