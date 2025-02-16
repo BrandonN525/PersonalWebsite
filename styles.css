@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +84,6 @@ nav a:hover {
 .clear {
   clear: both;
 }
-
 
 #visits {
   color: black;
@@ -200,6 +200,7 @@ footer {
   margin-top: 50px;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   /* Adjust Navigation */
   nav {
@@ -247,5 +248,24 @@ footer {
   /* Adjust headings if needed */
   h2 {
     font-size: 18px;
+  }
+
+  /* Objective section adjustments */
+  #objective {
+    width: 100%;
+    float: none;
+    padding: 0 10px;
+  }
+  
+  /* Layout of dt and dd elements */
+  dt {
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  dd {
+    width: 100%;
+    margin: 10px 0;
   }
 }
