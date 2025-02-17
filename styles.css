@@ -245,8 +245,10 @@ footer {
   
   /* Resume Container */
   .container {
-    width: 95%;
+    width: 90%;
     padding: 20px;
+    text-align: center;
+    margin: 0 auto;
   }
   
   /* Adjust headings if needed */
@@ -259,17 +261,12 @@ footer {
     width: 100%;
     float: none;
     padding: 0 10px;
+    text-align: center;
   }
   
   /* Layout of dt and dd elements */
-  dt {
+  dt, dd {
     width: 100%;
-    text-align: left;
-    padding: 5px 0;
-  }
-
-  dd {
-    width: 100%;
-    margin: 10px 0;
+    text-align: center;
   }
 }
