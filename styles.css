@@ -224,7 +224,7 @@ footer {
 
   /* Hero Section Adjustments */
   .hero {
-    height: 60vh; /* slightly shorter hero on mobile */
+    height: 50vh; /* slightly shorter hero on mobile */
     padding: 10px;
     text-align: center;
   }
