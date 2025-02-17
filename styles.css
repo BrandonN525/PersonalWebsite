@@ -91,7 +91,7 @@ nav a:hover {
 
 /* General Styling */
 .container {
-  width: 90%;
+  width: 70%;
   max-width: 1200px;
   margin: 40px auto;
   padding: 50px 0;
@@ -224,7 +224,7 @@ footer {
 
   /* Hero Section Adjustments */
   .hero {
-    height: 50vh; /* slightly shorter hero on mobile */
+    height: 60vh; /* slightly shorter hero on mobile */
     padding: 10px;
     text-align: center;
   }
