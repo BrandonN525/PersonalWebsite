@@ -88,6 +88,11 @@ nav a:hover {
 #visits {
   color: black;
   font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
 }
 
 #pic {
@@ -174,14 +179,6 @@ dd.clear {
   float: none;
   margin: 0;
   height: 15px;
-}
-
-#visits {
-  font-size: 20px;
-  padding: 10px;
-  display: block;
-  text-align: center;
-  margin-top: 20px;
 }
 
 /* Page Container */
