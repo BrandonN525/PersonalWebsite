@@ -245,28 +245,60 @@ footer {
   
   /* Resume Container */
   .container {
-    width: 90%;
-    padding: 20px;
+    width: 95%;
+    padding: 10px;
     text-align: center;
     margin: 0 auto;
   }
   
   /* Adjust headings if needed */
+  
   h2 {
     font-size: 16px;
+    position: float;
+    top: 0px;
+  }
+
+  h2 span {
+    position: static;
+    /*bottom: 0;
+    right: 0;*/
+    font-style: italic;
+    font-family: Georgia, Serif;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
   }
 
   /* Objective section adjustments */
   #objective {
     width: 100%;
-    float: none;
     padding: 0 10px;
     text-align: center;
   }
   
-  /* Layout of dt and dd elements */
-  dt, dd {
+  dt {
     width: 100%;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    height: 50px;
+    border-right: 1px solid #999;
+  }
+
+  dd {
+    width: 95%;
+    float: left;
+    margin: 10px;
     text-align: center;
   }
+
+  dd.clear {
+    float: none;
+    margin: 0;
+  }
+
 }
