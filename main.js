@@ -12,7 +12,7 @@ function setupNavigation() {
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
       } else {
-        window.location.href = this.getAttribute("href"); // Redirect to new pages
+        window.open(href, "_blank"); // Redirect to new pages
       }
     });
   });
