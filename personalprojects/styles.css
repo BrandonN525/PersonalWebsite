@@ -195,6 +195,22 @@ dd.clear {
   height: 15px;
 }
 
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
 /* Footer */
 footer {
   background: #333;
