@@ -1,23 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/jgp" href="codeimage.jpg">
-  <title>Personal Projects</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Projects - Brandon Nicolas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Personal Projects</h1>
-  <p>Welcome to my Personal Projects page. This webpage is currently in progress.</p>
+  <!-- Navigation Bar -->
+  <nav>
+    <div><strong>Brandon Nicolas</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Personal Projects</h1>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <!-- A simple grid of project cards -->
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/websiteimage.jpeg" alt="My Personal Website" style="max-width:100%;">
+        <h3>My Personal Website</h3>
+        <p>The website that you're visiting right now is hosted on AWS S3 as a static website! The visitor counter at the bottom of the main page automatically updates the number of visits to this website using a python lambda function, a backend DynamoDB database, and an API call. Updated project files are automatically pushed to my S3 Bucket after code is pushed to Git repository using AWS CodePipeline.</p>
+        <a href="https://github.com/BrandonN525/PersonalWebsite" class="cta" target="_blank" rel="noopener">View Details</a>
+      </div>
+      <div class="project-card">
+        <img src="images/serverlessAWS.png" alt="AWS Serverless" style="max-width:100%;">
+        <h3>AWS Serverless Project</h3>
+        <p>In this project I built a complete serverless back-end in AWS using Lambda, S3, DynamoDB, and API Gateway! This project was the beginning of my interest in AWS.</p>
+        <a href="https://github.com/BrandonN525/myServerlessProject" class="cta" target="_blank" rel="noopener">View Details</a>
+      </div>
+      <div class="project-card">
+        <img src="images/webscraper.jpeg" alt="Event Web Scraper" style="max-width:100%;">
+        <h3>NJ Traffic Event Web Scraper</h3>
+        <p>My first (simple) web scraper! This scraper pulls traffic event data from 511nj.org and dumps into a JSON file. I have plans to run this scraper again in the future and visualize the data in order to get insights into when might be the ideal times to avoid local highways near me, i.e. hours of the day in which accidents are most common. Stay tuned for the link to the Tableau viz I create!</p>
+        <a href="https://github.com/BrandonN525/NJ-Traffic-Event-History" class="cta" target="_blank" rel="noopener">View Details</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Brandon Nicolas. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
