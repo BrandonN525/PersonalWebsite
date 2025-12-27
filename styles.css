@@ -107,8 +107,8 @@ nav a:hover {
 
 /* General Styling */
 .container {
-  width: 70%;
-  max-width: 1200px;
+  width: 75%;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 50px 0;
 }
@@ -194,6 +194,7 @@ dt {
   float: left;
   height: 100px;
   border-right: 1px solid #999;
+  color: #1d4ed8;
 }
 
 dd {
@@ -231,6 +232,10 @@ footer {
   .nav-center,
   .nav-right {
     justify-self: center;
+  }
+
+  .nav-center {
+    font-size: 14px;
   }
 
   .nav-right {
@@ -275,19 +280,17 @@ footer {
   
   h2 {
     font-size: 16px;
-    position: float;
-    top: 0px;
+    position: static;
+    text-align: left;
   }
 
   h2 span {
     position: static;
-    /*bottom: 0;
-    right: 0;*/
-    font-style: italic;
-    font-family: Georgia, Serif;
+    display: block;
+    margin-top: 4px;
     font-size: 12px;
+    font-style: italic;
     color: #999;
-    font-weight: normal;
   }
 
   /* Objective section adjustments */
@@ -305,20 +308,35 @@ footer {
     text-align: center;
     padding: 10px;
     float: left;
-    height: 50px;
-    border-right: 1px solid #999;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
   }
 
   dd {
-    width: 95%;
-    float: left;
-    margin: 10px;
+    width: 100%;
+    float: none;
+    margin: 10px 0;
     text-align: center;
   }
 
   dd.clear {
     float: none;
     margin: 0;
+  }
+
+  ul {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  dd h2{
+    margin-top: 20px;
+  }
+
+  body{
+    line-height: 1.7;
   }
 
 }
