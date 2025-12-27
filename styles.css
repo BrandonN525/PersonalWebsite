@@ -223,7 +223,7 @@ footer {
 }
 
 /* Tablet Responsiveness */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   h2 {
     position: static;
   }
