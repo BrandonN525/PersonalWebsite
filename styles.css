@@ -218,6 +218,20 @@ footer {
   margin-top: 50px;
 }
 
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  h2 {
+    position: static;
+  }
+
+  h2 span {
+    position: static;
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   /* Adjust Navigation */
