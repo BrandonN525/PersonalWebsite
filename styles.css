@@ -209,6 +209,10 @@ dd.clear {
   height: 15px;
 }
 
+dd h2 {
+  margin-bottom: 12px;
+}
+
 /* Footer */
 footer {
   background: #333;
